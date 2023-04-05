@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>虚拟小猫生成器</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+
+<body>
+    <h1>虚拟小猫生成器</h1>
+    <p id="description"><i>告诉魔法师你的性格，他将在多元宇宙中为你选出一只最适合你的虚拟小猫</i></p>
+    <form id="user-form">
+        <label for="username">你的名字：</label>
+        <input type="text" id="username" name="username" required><br>
+
+        <label for="favoriteColor">请描述你喜欢的颜色：</label>
+        <input type="text" id="favoriteColor" name="favoriteColor" required><br>
+
+        <label for="favoriteTaste">最喜欢吃什么呢：</label>
+        <input type="text" id="favoriteTaste" name="favoriteTaste" required><br>
+
+        <label for="musicType">爱听什么歌：</label>
+        <input type="text" id="musicType" name="musicType" required><br>
+
+        <label for="relaxationMethod">周末做点什么放松自己呢：</label>
+        <input type="text" id="relaxationMethod" name="relaxationMethod" required><br>
+
+        <button type="submit">查看属于你的小猫</button>
+    </form>
+    <div id="cat-result">
+        <!-- 结果将在这里显示 -->
+    </div>
+    <script src="../static/script.js"></script>
+</body>
+
+</html>
