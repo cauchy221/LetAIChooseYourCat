@@ -5,7 +5,7 @@ import openai
 from openai.error import RateLimitError
 
 app = Flask(__name__)
-openai.api_key = 'YOUR_OPENAI_API_KEY'
+openai.api_key = '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'
 
 @app.route('/')
 def index():
@@ -63,7 +63,7 @@ def generate_cat_image():
     data = request.json
     translatedCatData = data['translatedCatData']
     SD_data = {
-        "key": "YOUR_STABLE_DIFFUSION_API_KEY", 
+        "key": "bD9pVuCJ2jo438mqN3mMN1dy4DHUxoh6KAiMjH1mUAzp4JZVmPV7GOAfU0TX", 
         "prompt": f"Generate a 2d, pixel art, cartoon cat image using imagination and creativity based on the following description:\n{translatedCatData}",
         "width": "512",
         "height": "512",

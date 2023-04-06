@@ -7,21 +7,8 @@ body {
 h1 {
     text-align: center;
     font-size: 2.5rem;
-    animation: blink 3s infinite;
     margin-bottom: 10px;
     margin-top: 10px;
-}
-
-@keyframes blink {
-    0% {
-        color: #fff;
-    }
-    50% {
-        color: #888b88;
-    }
-    100% {
-        color: #fff;
-    }
 }
 
 form {
@@ -94,5 +81,27 @@ button:hover {
     text-align: center;
     margin-top: 0px;
     margin-bottom: 25px;
-    color: #f7f772c9;
+    color: #fdfd1bcd;
+}
+
+#loading {
+    display: none;
+    font-size: 1.3rem;
+    text-align: center;
+    color: #fdfd1bcd;
+    margin-top: 20px;
+    margin-left: 30px;
+    animation: progress 2.5s infinite;
+}
+
+@keyframes progress {
+    0% {
+        color: #fdfd1bcd;
+    }
+    50% {
+        color: #fff;
+    }
+    100% {
+        color: #fdfd1bcd;
+    }
 }

@@ -1,5 +1,11 @@
 document.getElementById('user-form').addEventListener('submit', async (e) => {
     e.preventDefault();
+    // 显示等待动画
+    const loading = document.getElementById('loading');
+    const progressBar = document.getElementsByClassName('progress-bar');
+    loading.style.display = 'block';
+    
+    // 生成结果
     const username = document.getElementById('username').value;
     const favoriteColor = document.getElementById('favoriteColor').value;
     const favoriteTaste = document.getElementById('favoriteTaste').value;
@@ -10,7 +16,13 @@ document.getElementById('user-form').addEventListener('submit', async (e) => {
     const translatedCatData = await translateCatData(catData);
     const catImage = await generateCatImage(translatedCatData);
 
-    displayResult(catData, catImage);
+    // 隐藏等待动画
+    setTimeout(function () {
+        loading.style.display = 'none';
+    }, 1000);
+
+    // 显示结果
+    setTimeout(displayResult(catData, catImage), 1000);
     // displayResult(catData);
 });
 
@@ -70,8 +82,14 @@ function displayResult(catData, catImage) {
     const resultDiv = document.getElementById('cat-result');
     catData = catData.replace(/\n/g, '<br/>');
     resultDiv.innerHTML = `
+        <style>
+            .cat_data {
+                width: 50%;
+                margin: 0 auto;
+            }
+        </style>
         <h2>你的小猫：</h2>
-        <img src=${catImage} alt="cat image" width="15%" height="15%">
-        <div>${catData}</div>
+        <img src=${catImage} alt="cat image" width="10%" height="10%">
+        <div class="cat_data">${catData}</div>
     `;
 }
