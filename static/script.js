@@ -84,8 +84,8 @@ function displayResult(catData, catImage) {
     resultDiv.innerHTML = `
         <style>
             .cat_data {
-                width: 50%;
-                margin: 0 auto;
+                width: 40%;
+                margin-left: 26%;
             }
         </style>
         <h2>你的小猫：</h2>

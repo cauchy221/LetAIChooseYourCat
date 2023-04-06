@@ -74,6 +74,7 @@ button:hover {
 #cat-result p {
     font-size: 1.2rem;
     text-align: center;
+    width: 60%;
 }
 
 #description {
